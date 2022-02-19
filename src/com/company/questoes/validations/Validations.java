@@ -6,6 +6,10 @@ import java.util.Scanner;
 
 public class Validations {
 
+    /**
+     *  Esse método valida se uma string tem pelo menos um char especial
+    */
+
     public static boolean charSpecial(String str) {
         int size = str.length();
         String strings = "!@#$%^&*()-+";
@@ -22,6 +26,10 @@ public class Validations {
         return false;
     }
 
+    /**
+    * verifica se a string tem pelo menos um digito
+    */
+
     public static boolean getDigits(String str) {
         int sz = str.length();
         StringBuilder strDigits = new StringBuilder(sz);
@@ -35,6 +43,10 @@ public class Validations {
         return false;
     }
 
+
+    /**
+     *  Esse metodo imprime a instruções da senha para a questão 2
+    */
     public List<String> modelSenha() {
         List<String> mensagensSenhas = new ArrayList<>();
         mensagensSenhas.add("São aceitas apenas senhas fortes com as seguintes caracteristicas");
