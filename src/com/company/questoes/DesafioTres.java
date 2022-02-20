@@ -8,6 +8,14 @@ public class DesafioTres {
         for (int i = 0; i < count.length; i++) for (int j = 0; j < count[i].length; j++) count[i][j] = 0;
     }
 
+    /** Esse metodo verifica se é um anagrama
+     *
+     * @param from1
+     * @param to1
+     * @param from2
+     * @param to2
+     * @return
+     */
     private static boolean areAnagrams(int from1, int to1, int from2, int to2) {
         for (int i = 'a'; i <= 'z'; i++) {
             if (count[i][to1+1]-count[i][from1] != count[i][to2+1]-count[i][from2])
@@ -16,6 +24,10 @@ public class DesafioTres {
         return true;
     }
 
+    /** esse metodo faz a contagem dos anagramas e dos pares
+     *
+     * @param str
+     */
 
     public void anagramas (String str){
          int TC = str.length();
