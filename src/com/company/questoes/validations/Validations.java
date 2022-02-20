@@ -1,4 +1,4 @@
-package desafios;
+package com.company.questoes.validations;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -121,4 +121,38 @@ public class Validations {
         }
         return false;
     }
+
+    public static boolean isEmpty(CharSequence cs) {
+        return cs == null || cs.length() == 0;
+    }
+
+    /** Verifica se tem pelo menos um char minusculo e um maiusculo na string.
+     *
+     * @param cs
+     * @return
+     */
+    public static boolean isMixedCase(CharSequence cs) {
+        if (!isEmpty(cs) && cs.length() != 1) {
+            boolean containsUppercase = false;
+            boolean containsLowercase = false;
+            int sz = cs.length();
+
+            for(int i = 0; i < sz; ++i) {
+                if (containsUppercase && containsLowercase) {
+                    return true;
+                }
+
+                if (Character.isUpperCase(cs.charAt(i))) {
+                    containsUppercase = true;
+                } else if (Character.isLowerCase(cs.charAt(i))) {
+                    containsLowercase = true;
+                }
+            }
+
+            return containsUppercase && containsLowercase;
+        } else {
+            return false;
+        }
+    }
+
 }

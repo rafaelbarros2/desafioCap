@@ -1,5 +1,11 @@
 package com.company;
 
+import com.company.questoes.DesafioTres;
+import com.company.questoes.DesafiosUmDois;
+import com.company.questoes.validations.Validations;
+
+import java.util.Scanner;
+
 public class Main {
 
     /** Inicia as questão em um loop podendo escolher de 1 a 3 ou 0 se quiser sair do loop

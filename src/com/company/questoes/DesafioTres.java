@@ -1,4 +1,4 @@
-package desafios;
+package com.company.questoes;
 
 public class DesafioTres {
 

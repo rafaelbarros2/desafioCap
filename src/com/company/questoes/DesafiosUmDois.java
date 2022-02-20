@@ -1,8 +1,9 @@
-package desafios;
+package com.company.questoes;
 
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.*;
+import com.company.questoes.validations.Validations;
+
 import java.util.stream.Stream;
 
 public class DesafiosUmDois {
@@ -36,7 +37,7 @@ public class DesafiosUmDois {
             String  senha = sc.nextLine();
             desafioTwo(senha);
             sc.close();
-        }else if(StringUtils.isMixedCase(str)==false){
+        }else if(Validations.isMixedCase(str)==false){
             System.out.println("A senha tem que ter no minimo 1 letra maiuscula e 1 minuscula");
             System.out.println("Digite a sua senha");
             String  senhaCase = sc.nextLine();
