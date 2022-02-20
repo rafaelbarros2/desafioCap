@@ -65,19 +65,18 @@ public class Validations {
      *
      * @return palavra
      */
-    public String questionthreeValidation() {
+    public static String questionthreeValidation(String str) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Digite a palavra para ser analisada");
-        String palavra = "";
-        while (palavra.length() <= 2) {
-            palavra = sc.nextLine();
-            if (palavra.length() <= 2) {
-                System.out.println("Digite uma palavra de no minimo 3 caracteres");
-            }
+        String msg = "Digite uma palavra de no minimo 3 caracteres";
 
-        }
+        String palavra = str;
+        while (palavra.length() < 3) {
+            palavra = sc.nextLine();
+                System.out.println(msg);
+            }
         return palavra;
     }
+
 
     /**
      * Este metodo recebe uma palavra e remove todos os espaços entre, durante e
@@ -86,7 +85,7 @@ public class Validations {
      * @param palavra
      * @return palavra_sem_espaços
      */
-    public String retira_Espaco(String palavra) {
+    public static String retiraEspaco(String palavra) {
         String alterada = "", interna = (palavra).trim();
         char c;
 
@@ -104,7 +103,7 @@ public class Validations {
      * Este metodo verifica se tem caractes repetidos na String
      */
 
-    public boolean repetido(String s) {
+    public static boolean repetido(String s) {
         int i = 0, j, cont = 0;
         char c, d;
         boolean repeated = false;

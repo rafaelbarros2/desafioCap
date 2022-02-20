@@ -29,7 +29,7 @@ public class DesafioTres {
      * @param str
      */
 
-    public void anagramas (String str){
+    public int anagramas (String str){
          int TC = str.length();
 
         for (int tc = 0; tc < TC; tc++) {
@@ -50,8 +50,10 @@ public class DesafioTres {
             }
             if(res == 0) break;
                 System.out.println("o número de pares de substrings que são anagramas:  " + res);
-                if(res != 0) break;
+                return res;
+
             }
+        return 0;
         }
 
     }

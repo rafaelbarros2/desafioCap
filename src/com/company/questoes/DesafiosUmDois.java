@@ -56,16 +56,4 @@ public class DesafiosUmDois {
         sc.close();
     }
 
-    public Character[] getAllSubstrings(String string) {
-        int i;
-        Character[] result = new Character[0];
-        Collection<Character> list = new ArrayList<>();
-        for (i = 0; i < string.length(); i++) {
-            char chars = string.charAt(i);
-            list.add(chars);
-        }
-        result = list.toArray(result);
-        return result;
-    }
-
 }

@@ -42,8 +42,10 @@ public class Main {
 
             if (inteiro == 3) {
                 DesafioTres desafioTres = new DesafioTres();
+                System.out.println("Digite a palavra para ser analisada");
                 while (true) {
-                    String palavra = validations.questionthreeValidation();
+                    String str = sc.nextLine();
+                    String palavra = Validations.retiraEspaco(validations.questionthreeValidation(str));
                     if (validations.repetido(palavra) == true) {
                         desafioTres.anagramas(palavra);
                         break;
